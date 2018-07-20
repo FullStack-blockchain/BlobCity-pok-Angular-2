@@ -1,0 +1,74 @@
+
+
+<form class="column is-half is-offset-one-quarter">
+  <br/>
+  <h1 class="title" style="text-align: center"><b>Sign Up</b></h1>
+  <div class="field">
+    <label class="label">Name</label>
+    <p class="control has-icons-left has-icons-right">
+      <input id="name" class="input" type="text" name="name" #name="ngModel"
+             [(ngModel)]="model.username" required 
+             minlength="4" maxlength="24" [ngClass]="{'is-success': !name.errors }" placeholder="Enter full name">
+      <span class="icon is-small is-left">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fa" [ngClass]="{'fa-check': !name.errors }"></i>
+      </span>
+    </p>
+    <span class="help is-success">
+      <span [hidden]="name.errors">
+        This username is available
+      </span>
+    </span>
+  </div>
+
+  <div class="field">
+    <label class="label">Email</label>
+    <p class="control has-icons-left has-icons-right">
+      <input id="contactemail" class="input" type="text" name="contactemail" #contactemail="ngModel"
+             [(ngModel)]="model.useremail" required
+             pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [ngClass]="{'is-success': !contactemail.errors }"
+             placeholder="Enter email. Verification required">
+      <span class="icon is-small is-left">
+        <i class="fa fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fa" [ngClass]="{'fa-warning': contactemail.errors && contactemail.errors.pattern}" ></i>
+        <i class="fa" [ngClass]="{'fa-check': !contactemail.errors}" ></i>
+      </span>
+    </p>
+    <p class="help is-danger">
+      <span *ngIf="contactemail.errors && contactemail.errors.pattern">
+        This email is invalid
+      </span>
+    </p>
+    <p class="help is-success">
+      <span *ngIf="!contactemail.errors">
+        This email is valid
+      </span>
+    </p>
+  </div>
+
+  <div class="field">
+    <label class="label">PASSWORD</label>
+    <p class="control has-icons-left">
+      <input class="input" type="password" name="password" placeholder="Enter Password" [(ngModel)]="model.password" #password="ngModel" required >
+      <span class="icon is-small is-left">
+        <i class="fa fa-lock"></i>
+      </span>
+    </p>
+  </div>
+  <div class="column is-half is-offset-4">
+    <div class="field">
+      <p class="control">
+        <button class="button is-primary column is-8" (click)="register()" [ngClass]="{'is-loading': loading }" [attr.disabled]="contactemail.errors || name.errors || password.errors " >
+          REGISTER
+        </button>
+      </p>
+    </div>
+  </div>
+  <div style="text-align:center">
+  <a routerLink="/login"><span style="color:blue;">Already Registered?      Login Instead</span></a>
+  </div>
+</form>

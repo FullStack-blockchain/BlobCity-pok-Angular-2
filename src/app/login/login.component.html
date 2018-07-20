@@ -1,0 +1,37 @@
+
+
+<form class="column is-half is-offset-one-quarter">
+  <br/>
+  <h1 class="title" style="text-align: center"><b>Login</b></h1>
+  <div class="field">
+    <label class="label">EMAIL</label>
+    <p class="control has-icons-left">
+      <input class="input" type="email" placeholder="Email you registered with" name="email" [(ngModel)]="model.email" #email="ngModel" required >
+      <span class="icon is-small is-left">
+        <i class="fa fa-envelope"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <label class="label">PASSWORD</label>
+    <p class="control has-icons-left">
+      <input class="input" type="password" placeholder="Corresponding password" name="password" [(ngModel)]="model.password" #password="ngModel" required >
+      <span class="icon is-small is-left">
+        <i class="fa fa-lock"></i>
+      </span>
+    </p>
+  </div>
+  <a routerLink="#" class="pull-right"><span style="color:blue;text-align:right">Forgot Password?</span></a>
+  <div class="column is-half is-offset-4">
+    <div class="field">
+      <p class="control">
+        <button class="button is-primary column is-8 is-mobile" (click)="login()" [ngClass]="{'is-loading': loading }">
+          Login
+        </button>
+      </p>
+    </div>
+  </div>
+  <div style="text-align: center">
+  <a routerLink="/signup"><span style="color:blue; width:150%">No Account? Register Here</span></a>
+  </div>
+</form>

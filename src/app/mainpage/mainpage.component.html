@@ -1,0 +1,156 @@
+
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title"> Your Account </h1>
+        <br/>
+        <h2 class="subtitle columns">
+          <div class="column is-2">
+            <section class="main">
+              <h1 class="subtitle">Usage</h1>
+              <h2 class="subtitle"><strong class="important">{{usage?.usage}}</strong>{{usage?.unit}}</h2>
+              <h2 class="subtitle">{{usage?.note}}</h2>
+            </section>
+          </div>
+          <div class="column columns is-1">
+            <div class="column is-6">
+            </div>
+            <div class="column is-6  vertical-border">
+            </div>
+          </div>
+          <div class="column is-4">
+            <section class="main">
+              <h1 class="subtitle">Recurring Charge</h1>
+              <h2 class="subtitle"><strong class="important">{{recCharge.currency}}{{recCharge.charge}}</strong></h2>
+              <h2 class="subtitle">{{recCharge.note}}</h2>
+            </section>
+          </div>
+          <div class="columns column is-1">
+            <div class="column is-6">
+            </div>
+            <div class="column is-6  vertical-border">
+            </div>
+          </div>
+          <div class="column is-4">
+            <section class="main">
+              <h1 class="subtitle">Unbilled Usage</h1>
+              <h2 class="subtitle"><strong class="important">{{unbilled.currency}}{{unbilled.charge}}</strong></h2>
+              <h2 class="subtitle">{{unbilled.note}}</h2>
+            </section>
+          </div>
+        </h2>
+      </div>
+    </div>  
+  </section>
+  <div class="container">
+    <div style="background-color:#6A7C92;">
+      <div style="padding: 2rem; color:white">
+        <h1 class="contenttitle"><b> Your Datastore</b></h1>
+        <br/>
+        <h2 class="contentsubtitle">
+          All the data you load into BlobCity gets stored in a datastore. Inside the datastore runs our amazing data handling engine that allows
+          you to do magic with your data. You don’t have to understand what a datastore is, but it is important you give a name to your
+          datastore.
+        </h2>
+        <br/>
+        <form class="columns contentsubtitle">
+          xxxx  -
+          <p class="control">
+          <input class="input" type="text" placeholder="DatastoreName" style="margin-left: 15px;">
+          </p>
+          <button class="button btn-round" style="margin-left: 15px; background-color:	#C4C0BD; border-style:groove; width: 150px"><b>SUBMIT</b></button>
+          <p style="margin-left: 15px;">Name once set cannnot be changed</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <section class="section">
+      <div class="container">
+        <h1 class="contenttitle">Visualisation & Dashboards</h1>
+        <br/>
+        <div class="columns">
+          <div class="contentsubtitle column is-8">
+            Create and share real-time dashboards with your integrate visualisation and
+            dashboaring capabilities. Our visualisation is powered by Tableau.
+            FTP Data Management
+            Enable FTP if you would like to upload your data into BlobCity or download data
+            present in BlobCity over FTP. This is also currently the only non-api based access
+            to your data. FTP is also the only way to load your custom code.
+            Your account comes with sample dashboards we have created for you over public
+            data sets. You could consume these and could make your own.
+            To make dashboards over your data, you will first have to load your data into
+            BlobCity. All data you load into BlobCity is automatically synced to visualisation
+            tool and kept upto date with any updates and inserts you do on your datastore.
+            Whether you are a free user or paid customer, You have access to full visualisation and dashboarding capabillities at no additional costs.
+          </div>
+          <div class="column is-4" style="margin-top: 5%; text-align:center;">
+            <div class="button is-large btn-round" style="width: 60%; background-color: #FA1717; border-style: groove; color: white">Visualise</div>
+            <br/>
+            <div class="contentsubtitle" style="text-align: center">
+              visual.blobcity.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+  </div>
+  <div class="container">
+    <section class="section">
+      <div class="container">
+        <h1 class="contenttitle">FTP Data Management</h1>
+        <br/>
+        <div class="columns">
+          <div class="contentsubtitle column is-8">
+            Enable FTP if you would like to upload your data into BlobCity or download data
+            present in BlobCity over FTP. This is also currently the only non-api based access
+            to your data. FTP is also the only way to load your custom code.
+          </div>
+          <div class="column is-4" style="margin-top: 1%; text-align:center;">
+            <ui-switch size="large" on="ON" off="OFF" ></ui-switch>
+            <br/>
+            <div class="contentsubtitle" style="text-align: center">
+              <a>View Docs</a>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+  </div>
+  <div class="container">
+    <section class="section">
+      <div class="container">
+        <h1 class="contenttitle">Setup your own instance of BlobCity DB</h1>
+        <br/>
+        <div class="columns">
+          <div class="contentsubtitle column is-8">
+            The BlobCity DB ships as a Docker container and can be procured from the Docker Store.
+            Ti is available as a limited feature free edition or full feature enterprise license.
+          </div>
+          <div class="column is-4" style="text-align:center;">
+            <img src="../../assets/Docker_Container_white_icon 2@2x.png" alt="" height="200" width="200">
+          </div>
+        </div>
+        <div class="contentsubtitle">
+          <a>BlobCity DB on Docker</a>
+        </div>
+      </div>
+    </section>
+    <hr>
+  </div>
+  <div class="container">
+    <section class="section">
+      <h1 class="contenttitle">Need Help?</h1>
+      <br/>
+      <div class="contentsubtitle">
+        <p><b>Technical & Product Support: </b> support@blobcity.com</p>
+        <p><b>Sales Enquiry: </b> sales@blobcity.com</p>
+        <p><b>Worldwide Helpline: </b> +1 (347) 606 BLOB</p>
+      </div>
+    </section>
+  </div>
+</body>

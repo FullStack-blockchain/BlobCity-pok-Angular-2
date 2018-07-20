@@ -1,0 +1,21 @@
+{
+  "name": "db-portal",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Oscar Han <oscar93han@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "card-js": "^1.0.13"
+  }
+}

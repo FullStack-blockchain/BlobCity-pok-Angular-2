@@ -1,0 +1,51 @@
+@import '../mq'
+
+button
+  color: white
+.nav
+  background-color: #0B3558
+  a:hover
+    color: gray
+
+.nav-left a 
+  color: #fff
+  font-weight: bold
+
+a.r-item
+  color:#C1C1C1
+  padding: 0.5rem 1.75rem
+  +mobile
+    color: gray
+    &:hover
+      background-color: #F1F1F1
+
+.nav-toggle span
+  background-color: #C1C1C1
+
+
+
+
+
+aside.menu 
+  width: 120px
+  z-index: 1000
+  position: fixed
+  background-color: white
+  color: #252161
+  top: 52px
+  display: none
+  transition: display 500ms ease
+
+
+a.nav-item > aside.menu 
+  position: absolute
+  display: block
+
+.menu-list > li
+  border-style: none solid solid solid
+  border-width: 0.1px 0.5px 0.1px 0.5px
+
+
+
+
+

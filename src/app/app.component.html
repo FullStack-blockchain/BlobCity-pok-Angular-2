@@ -1,0 +1,64 @@
+
+<div *ngIf="!canActivate" class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a routerLink="/" class="nav-item"><span style="color:tomato">Blob</span><span style="color:white">City</span></a>
+    </div>
+
+    <span class="nav-toggle" (click)="toggleNav = !toggleNav;" [ngClass]="{'is-active': toggleNav }">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+
+    <div class="nav-right nav-menu" [ngClass]="{'is-active': toggleNav }">
+
+      <a routerLink="/store" class="nav-item r-item">Store</a>
+      <a routerLink="/login" class="nav-item r-item">Login</a>
+
+
+          <a routerLink="/signup" class="nav-item r-item">Sign Up</a>
+
+    </div>
+
+  </div>
+</div>
+
+<div *ngIf="canActivate" class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a routerLink="/" class="nav-item"><span style="color:tomato">Blob</span><span style="color:white">City</span></a>
+    </div>
+
+    <span class="nav-toggle" (click)="toggleNav = !toggleNav;" [ngClass]="{'is-active': toggleNav }">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+
+    <div class="nav-right nav-menu" (click)="toggleNav = false;" [ngClass]="{'is-active': toggleNav }">
+
+      <a routerLink="main" class="nav-item r-item">Home</a>
+      <a routerLink="/store" class="nav-item r-item">Store</a>
+      <a routerLink="bill" class="nav-item r-item">Balance: $100 </a>
+
+          <a class="nav-item" (click)="toggleDropdown = !toggleDropdown" >
+            <a class="nav-item r-item">Welcome User <i class="fa" [ngClass]="{'fa-caret-up': toggleDropdown, 'fa-caret-down': !toggleDropdown }" style="margin-left: 4px;"></i></a>
+            <aside *ngIf="toggleDropdown" class="menu">
+              <ul class="menu-list">
+                <li><a routerLink="account"><p>My Account</p></a></li>
+                <li><a routerLink="bill"><p>Billing</p></a></li>
+                <li><a routerLink="/login"><p>LogOut</p></a></li>
+              </ul>
+            </aside>
+          </a>
+
+    </div>
+
+  </div>
+</div>
+
+<alert></alert>
+<router-outlet></router-outlet>
+
+Footer
